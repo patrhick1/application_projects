@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kansas DMV Exam - Quiz Sections</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, p {
+            text-align: center;
+            color: #333;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .tile {
+            background-color: #4CAF50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.2s, background-color 0.2s;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .tile:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Kansas DMV Exam - Practice Quizzes</h1>
+        <p>
+            These quizzes are based on the Kansas DMV Handbook and cover different sections of the exam. 
+            Each section below represents a quiz designed to help you prepare for the test.
+            Click on any section to start the quiz!
+        </p>
+
+        <div class="grid-container">
+            <!-- Each tile links to a quiz section -->
+            <a href="quiz_section_1.html" class="tile">Section 1: The driver's License</a>
+            <a href="quiz_section_2.html" class="tile">Section 2: State/Provincial/Territory Laws and rules of the road</a>
+            <a href="quiz_section_3.html" class="tile">Section 3: Be in shape to drive</a>
+            <a href="quiz_section_4.html" class="tile">Section 4: Before you drive</a>
+            <a href="quiz_section_5.html" class="tile">Section 5: Basic Driving</a>
+            <a href="quiz_section_6.html" class="tile">Section 6: Rule of the Road</a>
+            <a href="quiz_section_7.html" class="tile">Section 7: Safe Driving Tips</a>
+            <a href="quiz_section_8.html" class="tile">Section 8: Avoiding collisions and Emergency situations</a>
+            <a href="quiz_section_9.html" class="tile">Section 9: Sharing the road</a>
+            <a href="quiz_section_10.html" class="tile">Section 10: Special driving situations </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Quiz questions are based on the Kansas DMV Handbook. Use these quizzes to help prepare for your DMV exam.</p>
+    </footer>
+
+</body>
+</html>
