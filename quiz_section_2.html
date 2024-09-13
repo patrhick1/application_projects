@@ -129,57 +129,133 @@
 
     <script>
         const quizData = [
-			{
-				question: "What does Kansas' basic speed law require drivers to consider when choosing a speed?",
-				options: ["The maximum speed limit posted on the road", "The speed of other vehicles", "Road, weather, and vehicle conditions"],
-				correctAnswer: 2
-			},
-			{
-				question: "What is the speed limit in an urban district in Kansas unless otherwise posted?",
-				options: ["20 miles per hour", "30 miles per hour", "40 miles per hour"],
-				correctAnswer: 1
-			},
-			{
-				question: "What is the speed limit on Kansas state or federal highways outside towns, unless otherwise posted?",
-				options: ["60 miles per hour", "55 miles per hour", "65 miles per hour"],
-				correctAnswer: 2
-			},
-			{
-				question: "At what speed are vehicles allowed to travel in a school zone in Kansas when properly marked?",
-				options: ["15 miles per hour", "20 miles per hour", "25 miles per hour"],
-				correctAnswer: 1
-			},
-			{
-				question: "Which law prohibits a driver from driving so slowly that it impedes the normal flow of traffic?",
-				options: ["Kansas Impeding Traffic Law", "Kansas Minimum Speed Law", "Kansas Obstructive Driving Law"],
-				correctAnswer: 1
-			},
-			{
-				question: "What must a driver do when an emergency vehicle approaches with flashing lights?",
-				options: ["Slow down and allow the vehicle to pass", "Pull over to the curb or edge of the road and stop", "Speed up to avoid obstructing the emergency vehicle"],
-				correctAnswer: 1
-			},
-			{
-				question: "Under Kansas law, when must seatbelts be worn?",
-				options: ["Only by drivers", "By all occupants in a vehicle", "Only by front-seat passengers"],
-				correctAnswer: 1
-			},
-			{
-				question: "Who is responsible for ensuring children are properly restrained in a vehicle in Kansas?",
-				options: ["The driver", "The child's guardian", "The front-seat passenger"],
-				correctAnswer: 0
-			},
-			{
-				question: "What should you do if you approach a school bus with red lights flashing and a stop arm extended?",
-				options: ["Slow down but continue driving", "Stop and wait until the lights stop flashing and the stop arm is withdrawn", "Pass the bus if it is on the other side of the road"],
-				correctAnswer: 1
-			},
-			{
-				question: "What is the minimum following distance you should maintain when driving behind a large vehicle like a truck?",
-				options: ["100 feet", "200 feet", "500 feet"],
-				correctAnswer: 1
-			}
+		    {
+		        question: "What does Kansas' Basic Speed Law require you to do?",
+		        options: ["Drive at the posted speed limit", "Never drive faster than is safe for the current conditions", "Drive as fast as traffic allows"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is the speed limit in urban districts unless otherwise posted?",
+		        options: ["30 mph", "40 mph", "25 mph"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What is the speed limit on a separated, multilane highway outside of towns?",
+		        options: ["65 mph", "75 mph", "55 mph"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is the maximum speed limit in a school zone when properly marked?",
+		        options: ["25 mph", "20 mph", "15 mph"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do when driving slower than the minimum speed limit?",
+		        options: ["Stay in the middle lane", "Move to the right and let faster vehicles pass", "Increase your speed"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When must you use a child safety seat in Kansas?",
+		        options: ["For children under 4 years old", "For children under 8 years old", "For children taller than 4'9\""],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "At what age or height can a child transition from a booster seat to a seatbelt in Kansas?",
+		        options: ["At age 4", "When they are taller than 4'9\" or over 80 pounds", "At age 6"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "How far in advance must you signal before making a turn?",
+		        options: ["50 feet", "100 feet", "200 feet"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "Where are U-turns prohibited?",
+		        options: ["On highways", "On curves, hills, or places with poor visibility within 500 feet", "At intersections"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do when passing another vehicle on a two-lane road?",
+		        options: ["Exceed the speed limit to pass quickly", "Return to your lane only when you can see the entire vehicle in your rearview mirror", "Pass without using turn signals"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When are you allowed to pass on the right?",
+		        options: ["On one-way streets or highways with two or more lanes in each direction", "Only when the vehicle in front of you is turning left", "When driving on the shoulder"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "How much following distance should you allow when driving in ideal conditions?",
+		        options: ["Two seconds", "Four seconds", "Six seconds"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "When should you increase your following distance?",
+		        options: ["In poor weather conditions or when following large vehicles", "On highways", "During rush hour"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What is required when stopping at a stop sign?",
+		        options: ["Slow down but keep moving", "Make a complete stop at the stop line or crosswalk", "Only stop if there is traffic"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When must you stop for a school bus with flashing red lights and an extended stop sign?",
+		        options: ["Only if you are behind the bus", "When meeting or overtaking the bus on any road, except a divided highway", "Only in school zones"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do when an emergency vehicle is approaching with flashing lights and siren?",
+		        options: ["Speed up to get out of the way", "Pull to the right and stop", "Stay in your lane and continue driving"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do when approaching a stationary emergency vehicle with flashing lights on a multi-lane road?",
+		        options: ["Slow down and move to a lane not next to the stopped vehicle", "Continue at the posted speed limit", "Honk your horn to alert them"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "When must you yield the right-of-way to another vehicle?",
+		        options: ["When you arrive at an intersection at the same time as another vehicle", "When turning left across traffic", "When your vehicle is faster than the other"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When must you stop before entering an intersection?",
+		        options: ["When there is no space to clear the intersection", "Only when there is a red light", "When there are pedestrians"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "How far must you park from a fire hydrant?",
+		        options: ["10 feet", "15 feet", "20 feet"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is the rule for parking near a railroad crossing?",
+		        options: ["You may park within 10 feet", "You must park at least 50 feet away", "Parking is not allowed within 30 feet"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "Where is parking prohibited?",
+		        options: ["In front of a private driveway", "Next to a fire hydrant", "In a marked handicap zone without a permit"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "When can you legally pass a stopped school bus on a divided highway?",
+		        options: ["When traveling in the opposite direction", "Never", "Only if no children are present"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What should you do if you approach a yield sign?",
+		        options: ["Always stop", "Proceed with caution and yield to traffic or pedestrians", "Speed through if the road is clear"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What does a double solid yellow line on the road indicate?",
+		        options: ["Passing is allowed in both directions", "Passing is prohibited in both directions", "Passing is allowed if safe"],
+		        correctAnswer: 1
+		    }
 		];
+
 
 
 
