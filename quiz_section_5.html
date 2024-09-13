@@ -123,89 +123,138 @@
         <div id="score-tracker">Question 1/5 | Score: 0</div>
         <div id="quiz"></div>
         <button id="submit">Submit Answer</button>
+	<button id="home">Back to Home</button>
         <div id="result"></div>
     </div>
 
     <script>
         const quizData = [
-			{
-				question: "What is the first thing you should do before starting your vehicle?",
-				options: ["Turn on the headlights", "Make sure the parking brake is set", "Press the accelerator"],
-				correctAnswer: 1
-			},
-			{
-				question: "How should you accelerate when starting your vehicle?",
-				options: ["Quickly press down on the accelerator", "Gradually and smoothly press the accelerator", "Immediately release the clutch and press the accelerator"],
-				correctAnswer: 1
-			},
-			{
-				question: "What could happen if you release the clutch too quickly in a vehicle with a manual transmission?",
-				options: ["The vehicle will jerk forward, and the engine may stall", "The vehicle will gain speed too fast", "The brakes will lock"],
-				correctAnswer: 0
-			},
-			{
-				question: "When should you signal before making a turn?",
-				options: ["1 second before the turn", "3 to 4 seconds before the turn", "Right as you begin to turn"],
-				correctAnswer: 1
-			},
-			{
-				question: "When backing up, what should you do?",
-				options: ["Rely on your mirrors", "Turn your head and look through the rear window", "Use only the rearview camera"],
-				correctAnswer: 1
-			},
-			{
-				question: "What is the recommended hand position on the steering wheel?",
-				options: ["10 and 2 o’clock", "12 o’clock for both hands", "9 and 3 o’clock"],
-				correctAnswer: 2
-			},
-			{
-				question: "When should you use your vehicle’s horn?",
-				options: ["To alert other drivers to your presence when necessary", "To express frustration", "Whenever you are passing another vehicle"],
-				correctAnswer: 0
-			},
-			{
-				question: "What should you do if your wheels lock while braking?",
-				options: ["Press harder on the brakes", "Ease off the brakes to regain traction", "Shift into neutral"],
-				correctAnswer: 1
-			},
-			{
-				question: "When stopping at a stop sign or traffic signal, where should you stop?",
-				options: ["Before the stop line or crosswalk", "After crossing the stop line", "Halfway through the intersection"],
-				correctAnswer: 0
-			},
-			{
-				question: "If your vehicle begins to skid, what is the best action to take?",
-				options: ["Accelerate quickly to regain control", "Steer in the direction of the skid", "Slam on the brakes"],
-				correctAnswer: 1
-			},
-			{
-				question: "How should you approach a curve when driving?",
-				options: ["Speed up before entering the curve", "Slow down before entering the curve", "Accelerate in the middle of the curve"],
-				correctAnswer: 1
-			},
-			{
-				question: "When parking uphill with a curb, how should your wheels be positioned?",
-				options: ["Turned away from the curb", "Turned toward the curb", "Straight"],
-				correctAnswer: 0
-			},
-			{
-				question: "What is the proper following distance between you and the vehicle in front of you?",
-				options: ["1 second", "3 seconds", "5 seconds"],
-				correctAnswer: 1
-			},
-			{
-				question: "What should you do if you miss your exit on a highway?",
-				options: ["Reverse carefully to the exit", "Take the next exit", "Make a U-turn on the highway"],
-				correctAnswer: 1
-			},
-			{
-				question: "If your vehicle has anti-lock brakes (ABS), how should you brake during an emergency stop?",
-				options: ["Pump the brakes", "Apply firm, steady pressure to the brakes", "Press the brake pedal lightly"],
-				correctAnswer: 1
-			}
+		    {
+		        question: "Before starting the vehicle, what should you always do?",
+		        options: ["Check the radio", "Set the parking brake", "Open the windows"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When driving a vehicle with an automatic transmission, what should you do before shifting to 'Drive'?",
+		        options: ["Press the gas pedal", "Release the parking brake", "Press the brake pedal"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "When driving a manual transmission vehicle, what should you do before starting?",
+		        options: ["Press the clutch pedal to the floor", "Shift into first gear", "Press the gas pedal"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What is the recommended hand position for hand-to-hand (push-pull) steering?",
+		        options: ["10 and 2 o'clock", "7 and 8 o'clock and 4 and 5 o'clock", "9 and 3 o'clock"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do if the drive wheels begin to spin on a slippery surface?",
+		        options: ["Press harder on the gas pedal", "Take your foot off the accelerator", "Shift into a lower gear"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is the proper technique for accelerating in poor traction conditions like rain or snow?",
+		        options: ["Accelerate quickly", "Use moderate acceleration", "Increase speed gradually"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "When should hand-over-hand steering be used?",
+		        options: ["At low speeds, such as when parking", "When driving on the highway", "When changing lanes"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "How should you position your hands when backing a vehicle?",
+		        options: ["Both hands on the top of the steering wheel", "One hand at 12 o'clock on the steering wheel", "Both hands at 9 and 3 o'clock"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is evasive action steering?",
+		        options: ["A method used for parking", "A technique used to avoid hazards", "A slow steering method for low speeds"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When backing up, where should you look?",
+		        options: ["In the rearview mirror", "Directly through the rear window", "At the dashboard"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "How should you apply the brakes for a smooth stop?",
+		        options: ["Press the brake pedal firmly", "Press the brake pedal with steady pressure", "Pump the brakes"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do before stopping your vehicle at a stop sign?",
+		        options: ["Place your foot on the gas pedal", "Check mirrors for traffic", "Set the parking brake"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When accelerating a manual transmission vehicle, how should you release the clutch?",
+		        options: ["Quickly", "Gradually", "With the parking brake engaged"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is the primary function of the steering wheel?",
+		        options: ["To accelerate the vehicle", "To control the direction of the vehicle", "To adjust the brakes"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When should you use one-hand steering?",
+		        options: ["When parking", "When driving straight", "When reaching for vehicle controls"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "Why is it important to limit steering input when performing evasive maneuvers?",
+		        options: ["To avoid using the brakes", "To prevent oversteering and loss of control", "To reduce the risk of engine stalling"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do before backing up your vehicle?",
+		        options: ["Signal your intention", "Check behind your vehicle", "Press the gas pedal"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "How should you steer the vehicle when moving in reverse?",
+		        options: ["Turn the steering wheel in the opposite direction", "Turn the steering wheel in the direction you want the rear to move", "Do not turn the steering wheel"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "Where should your foot be when accelerating a vehicle?",
+		        options: ["On the gas pedal only", "With the heel on the floor and the top of the foot on the pedal", "On the clutch pedal"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When stopping at a traffic signal, where should you stop your vehicle?",
+		        options: ["Behind the stop line or crosswalk", "In the middle of the intersection", "In front of the stop sign"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What is the risk of turning the steering wheel with your palms?",
+		        options: ["It provides better control", "It increases the chance of losing control of the vehicle", "It makes turning easier"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is the purpose of hand-to-hand steering?",
+		        options: ["To avoid crossing your arms during turns", "To make sharp turns", "To control vehicle speed"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What happens if you release the clutch too quickly in a manual transmission vehicle?",
+		        options: ["The vehicle will accelerate smoothly", "The vehicle may jerk forward or stall", "The vehicle will stop immediately"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is the proper hand position for hand-over-hand steering?",
+		        options: ["8 and 9 o'clock and 3 and 4 o'clock", "10 and 2 o'clock", "12 and 6 o'clock"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "Why is it harder to steer a vehicle when backing up?",
+		        options: ["The steering wheel locks", "The rearview mirrors are obstructed", "The vehicle is harder to control at slow speeds"],
+		        correctAnswer: 2
+		    }
 		];
-
-
 
 
 
@@ -216,9 +265,15 @@
 
         const quizElement = document.getElementById('quiz');
         const submitButton = document.getElementById('submit');
+        const homeButton = document.getElementById('home'); // Home button
         const resultElement = document.getElementById('result');
         const scoreTrackerElement = document.getElementById('score-tracker');
         const progressElement = document.getElementById('progress');
+
+        // Functionality to return home
+        homeButton.onclick = () => {
+            window.location.href = "index.html"; // Redirect to index.html or your homepage
+        };
 
         function loadQuestion() {
             if (currentQuestion < quizData.length) {
