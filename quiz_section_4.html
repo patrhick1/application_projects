@@ -123,63 +123,139 @@
         <div id="score-tracker">Question 1/10 | Score: 0</div>
         <div id="quiz"></div>
         <button id="submit">Submit Answer</button>
+	<button id="home">Back to Home</button>
         <div id="result"></div>
     </div>
 
     <script>
         const quizData = [
-			{
-				question: "Why should you adjust your seat before driving?",
-				options: ["To improve comfort", "To ensure proper visibility and control of the vehicle", "To feel more relaxed"],
-				correctAnswer: 1
-			},
-			{
-				question: "How far should your body be from the steering wheel to allow airbag deployment?",
-				options: ["6 inches", "8 inches", "10 inches"],
-				correctAnswer: 2
-			},
-			{
-				question: "What is the proper adjustment for the rearview mirror?",
-				options: ["You should be able to see the back seat", "You should see the rear window and traffic behind you", "You should see both the rear window and side mirrors"],
-				correctAnswer: 1
-			},
-			{
-				question: "Why is it important to adjust head restraints correctly?",
-				options: ["To prevent whiplash in the event of a rear-end crash", "To improve your sitting posture", "To make the seat more comfortable"],
-				correctAnswer: 0
-			},
-			{
-				question: "Where should a child under 12 years old be placed in a vehicle equipped with airbags?",
-				options: ["The front seat", "The back seat", "Either seat is safe"],
-				correctAnswer: 1
-			},
-			{
-				question: "What is the purpose of using seat belts and child restraints?",
-				options: ["To avoid fines from law enforcement", "To reduce the risk of injury or death in a crash", "To improve comfort during driving"],
-				correctAnswer: 1
-			},
-			{
-				question: "At what age can children stop using a booster seat in Kansas?",
-				options: ["5 years old", "8 years old", "10 years old"],
-				correctAnswer: 1
-			},
-			{
-				question: "When should the parking brake be used?",
-				options: ["Only when parking on a hill", "Every time you park the vehicle", "Only in an emergency situation"],
-				correctAnswer: 1
-			},
-			{
-				question: "Why is it important to avoid reclining the driver's seat too far back?",
-				options: ["It reduces comfort during long trips", "It makes it harder to reach the steering wheel and pedals", "It affects your visibility of traffic signs"],
-				correctAnswer: 1
-			},
-			{
-				question: "What should you check before starting the vehicle?",
-				options: ["That all doors are locked", "That your foot is on the accelerator", "That the parking brake is set"],
-				correctAnswer: 2
-			}
+			const quizData = [
+		    {
+		        question: "What is the correct position for your head restraint to help prevent whiplash?",
+		        options: ["At the level of your ears", "Below your shoulders", "Above your head"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "How far should you sit from the steering wheel to allow airbag deployment?",
+		        options: ["5 inches", "10 inches", "15 inches"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When should you adjust your seat and mirrors?",
+		        options: ["After you start driving", "Before you start driving", "When you are at a stoplight"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is the purpose of adjusting your mirrors properly?",
+		        options: ["To avoid using side mirrors", "To expand your viewing area", "To eliminate blind spots completely"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "In Kansas, it is illegal to drive without wearing which of the following?",
+		        options: ["A seatbelt", "Sunglasses", "A hat"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "When should you wear a seatbelt?",
+		        options: ["Only on highways", "Only on long trips", "At all times when driving"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "What is the correct way to wear a shoulder harness?",
+		        options: ["Under your arm", "Across your shoulder and chest", "Behind your back"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "Where should the lap belt be positioned?",
+		        options: ["Low across your hips", "Across your stomach", "High on your waist"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "When should children under the age of 12 be placed in the back seat?",
+		        options: ["Only on highways", "Always", "Only when the vehicle is moving"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "Airbags are most effective when used in combination with what?",
+		        options: ["Steering adjustments", "Safety belts", "Driving at low speeds"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do to reduce the risk of injury from a deploying airbag?",
+		        options: ["Sit closer to the steering wheel", "Sit at least 10 inches from the airbag", "Turn off the airbag"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "Where should infants be placed in a vehicle equipped with airbags?",
+		        options: ["In the front seat", "In a rear-facing seat in the back seat", "In a forward-facing seat in the front seat"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "At what age can children start using an adult seatbelt in the back seat without a booster seat?",
+		        options: ["At age 6", "At age 8 or when they are 4 feet 9 inches tall", "At age 10"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is the purpose of the childproof locks in a vehicle?",
+		        options: ["To lock the vehicle doors", "To prevent children from opening the rear doors from the inside", "To lock the seatbelts"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "Why should you avoid reclining your seat too far back while driving?",
+		        options: ["It blocks your view of the mirrors", "It reduces your control of the vehicle", "It increases airbag effectiveness"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When using traditional mirror settings, what should you see in your side mirrors?",
+		        options: ["The side of your vehicle", "Only the road", "The interior of your car"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "How should you adjust your side mirrors using the enhanced mirror setting?",
+		        options: ["So you can see the sides of your vehicle", "So you can see the rear fender just barely visible", "So you can see the front wheels"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is whiplash?",
+		        options: ["A type of seatbelt", "A neck injury caused by a rear-end collision", "A term for fast driving"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "Why should children under 1 year old always ride in a rear-facing infant seat?",
+		        options: ["For comfort", "For better air circulation", "For safety in case of a collision"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "When should a rear-facing child safety seat be placed in the front seat?",
+		        options: ["Never", "When there is no back seat", "Only when the airbag is turned off"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "Why is it important to read your vehicle owner's manual regarding airbags?",
+		        options: ["To learn how to replace the airbag", "To understand how the airbag system in your vehicle works", "To find out how to turn off the airbag"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you check for before driving a vehicle equipped with airbags?",
+		        options: ["That the airbags are deflated", "That your seat is at least 10 inches from the airbag", "That the airbag light is off"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is the purpose of using a seat cushion when driving?",
+		        options: ["For comfort", "To improve visibility and adjust seating for airbag deployment", "To support your back"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "What happens when an airbag deploys during a crash?",
+		        options: ["It inflates slowly", "It inflates rapidly and deflates quickly", "It stays inflated after deployment"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When should you lock the vehicle's doors?",
+		        options: ["Only at night", "When you are parked", "Before driving, especially with children in the vehicle"],
+		        correctAnswer: 2
+		    }
 		];
-
 
 
 
@@ -190,9 +266,15 @@
 
         const quizElement = document.getElementById('quiz');
         const submitButton = document.getElementById('submit');
+        const homeButton = document.getElementById('home'); // Home button
         const resultElement = document.getElementById('result');
         const scoreTrackerElement = document.getElementById('score-tracker');
         const progressElement = document.getElementById('progress');
+
+        // Functionality to return home
+        homeButton.onclick = () => {
+            window.location.href = "index.html"; // Redirect to index.html or your homepage
+        };
 
         function loadQuestion() {
             if (currentQuestion < quizData.length) {
