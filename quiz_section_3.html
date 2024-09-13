@@ -123,62 +123,139 @@
         <div id="score-tracker">Question 1/5 | Score: 0</div>
         <div id="quiz"></div>
         <button id="submit">Submit Answer</button>
+	<button id="home">Back to Home</button>
         <div id="result"></div>
     </div>
 
     <script>
         const quizData = [
-			{
-				question: "Why is good vision critical for safe driving?",
-				options: ["It helps you see road signs from a distance.", "It ensures you can control your vehicle based on what you see.", "It improves your reaction time."],
-				correctAnswer: 1
-			},
-			{
-				question: "What is the minimum vision standard required to pass the Kansas vision test?",
-				options: ["20/20 in both eyes", "20/50 in one eye", "20/40 in at least one eye"],
-				correctAnswer: 2
-			},
-			{
-				question: "Which of the following can affect your ability to drive safely?",
-				options: ["A stiff neck or sore leg", "Talking to passengers", "Eating before driving"],
-				correctAnswer: 0
-			},
-			{
-				question: "What should you do if you feel tired while driving?",
-				options: ["Drink coffee and keep driving.", "Find a safe place to take a short nap.", "Increase your speed to reach your destination faster."],
-				correctAnswer: 1
-			},
-			{
-				question: "If you are taking prescription medications, what should you do before driving?",
-				options: ["Avoid driving at night.", "Check with your doctor to ensure the medication won’t affect your driving.", "Make sure you are wearing your seatbelt."],
-				correctAnswer: 1
-			},
-			{
-				question: "What is the legal blood alcohol concentration (BAC) limit for drivers in Kansas?",
-				options: ["0.02", "0.08", "0.10"],
-				correctAnswer: 1
-			},
-			{
-				question: "Which of the following emotions can negatively impact your driving ability?",
-				options: ["Excitement", "Fear", "Both a and b"],
-				correctAnswer: 2
-			},
-			{
-				question: "What should you do if you are feeling overly emotional while driving?",
-				options: ["Take a short walk to calm down before continuing to drive.", "Ignore the feeling and focus on the road.", "Turn up the music to distract yourself."],
-				correctAnswer: 0
-			},
-			{
-				question: "How can aggressive driving be prevented?",
-				options: ["Driving faster to avoid slower drivers.", "Being realistic about your travel time and staying calm.", "Speeding when you're late for an appointment."],
-				correctAnswer: 1
-			},
-			{
-				question: "Which of the following is NOT recommended if you wear corrective lenses for driving?",
-				options: ["Keeping an extra pair of corrective lenses in your vehicle.", "Wearing dark or tinted corrective lenses at night.", "Wearing corrective lenses whenever driving."],
-				correctAnswer: 1
-			}
+		    {
+		        question: "What is the minimum vision standard required to obtain a Kansas driver’s license?",
+		        options: ["20/40 vision in one eye", "20/50 vision in both eyes", "20/60 vision in one eye"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "If your vision can be corrected to meet the vision standard, what restriction will be added to your license?",
+		        options: ["Daylight driving only", "Corrective lenses required", "No restriction"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you avoid wearing at night when driving?",
+		        options: ["Sunglasses", "Prescription glasses", "Dark or tinted lenses"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "How can hearing help you drive more safely?",
+		        options: ["By allowing you to hear traffic signals", "By warning you of danger, such as horns or sirens", "By improving your vision"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is a major risk of driving while fatigued?",
+		        options: ["Improved reaction time", "Impaired judgment and slower reaction time", "Reduced fuel efficiency"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is a recommended way to avoid fatigue while driving long distances?",
+		        options: ["Take regular breaks every 100 miles or 2 hours", "Drive faster to reach your destination sooner", "Drink plenty of water"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What should you do if you feel fatigued while driving?",
+		        options: ["Turn up the radio", "Pull off the road and rest", "Open the windows"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do if you need to use your cell phone while driving?",
+		        options: ["Stop in a safe parking area to make the call", "Use your phone while driving slowly", "Use the speakerphone"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What is considered a major distraction while driving?",
+		        options: ["Looking at billboards", "Checking the rearview mirror", "Using an electronic device like a GPS or cell phone"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "Which of the following is NOT a recommended way to prevent driver distractions?",
+		        options: ["Avoid using your phone while driving", "Make sure pets are properly secured", "Talk to friends in other vehicles"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "What should you do if you encounter an aggressive driver on the road?",
+		        options: ["Ignore them and avoid eye contact", "Challenge them by speeding up", "Flash your lights to get their attention"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What should you do if an aggressive driver is tailgating you?",
+		        options: ["Brake hard", "Move over and let them pass", "Speed up to create distance"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is the legal Blood Alcohol Concentration (BAC) limit for drivers over 21 in Kansas?",
+		        options: [".08%", ".02%", ".10%"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What is the legal BAC limit for drivers under the age of 21 in Kansas?",
+		        options: [".08%", ".05%", ".02%"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "What is a common effect of alcohol on a driver?",
+		        options: ["Improved reaction time", "Decreased ability to judge speed and distance", "Better focus on the road"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do if a friend who has been drinking wants to drive?",
+		        options: ["Offer to drive or arrange for alternative transportation", "Let them drive slowly", "Follow them in your vehicle"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "How long does it take for the body to process one standard drink of alcohol?",
+		        options: ["30 minutes", "1 hour", "2 hours"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is Kansas' implied consent law?",
+		        options: ["Drivers consent to take a BAC test if requested by law enforcement", "Drivers can refuse a BAC test without penalty", "Drivers must always take a drug test"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What happens if you refuse to take a BAC test in Kansas?",
+		        options: ["Your license may be suspended for one year", "You will receive a warning", "Nothing happens"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "Which of the following is NOT a safe practice when taking prescription or over-the-counter drugs and driving?",
+		        options: ["Read the label for side effects", "Assume all over-the-counter drugs are safe", "Consult a doctor if unsure about the effects of the drug on driving"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "Which type of drugs, other than alcohol, can impair your ability to drive safely?",
+		        options: ["Prescription drugs, over-the-counter medications, and illegal drugs", "Only illegal drugs", "Only prescription drugs"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What is the first sense to be impaired by alcohol consumption?",
+		        options: ["Hearing", "Judgment", "Coordination"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is the only method to effectively reduce your Blood Alcohol Concentration (BAC)?",
+		        options: ["Drinking coffee", "Taking a cold shower", "Time"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "What is the best way to avoid driving under the influence of alcohol or drugs?",
+		        options: ["Wait until you feel sober", "Plan ahead and arrange for a designated driver", "Take a nap before driving"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "Why should you avoid emotional driving?",
+		        options: ["It improves reaction time", "It increases the risk of distraction and poor decision-making", "It helps you concentrate better"],
+		        correctAnswer: 1
+		    }
 		];
+
 
 
 
@@ -188,11 +265,17 @@
         let score = 0;
         let userAnswers = [];
 
-        const quizElement = document.getElementById('quiz');
+       	const quizElement = document.getElementById('quiz');
         const submitButton = document.getElementById('submit');
+        const homeButton = document.getElementById('home'); // Home button
         const resultElement = document.getElementById('result');
         const scoreTrackerElement = document.getElementById('score-tracker');
         const progressElement = document.getElementById('progress');
+
+        // Functionality to return home
+        homeButton.onclick = () => {
+            window.location.href = "index.html"; // Redirect to index.html or your homepage
+        };
 
         function loadQuestion() {
             if (currentQuestion < quizData.length) {
