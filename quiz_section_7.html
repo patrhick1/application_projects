@@ -123,87 +123,139 @@
         <div id="score-tracker">Question 1/5 | Score: 0</div>
         <div id="quiz"></div>
         <button id="submit">Submit Answer</button>
+	<button id="home">Back to Home</button>
         <div id="result"></div>
     </div>
 
     <script>
         const quizData = [
-			{
-				question: "What is the main purpose of a visual search while driving?",
-				options: ["To check the speedometer frequently", "To gather information about the road and surrounding conditions", "To monitor the gas gauge"],
-				correctAnswer: 1
-			},
-			{
-				question: "When driving in heavy traffic, where should you look to anticipate problems?",
-				options: ["Directly in front of your vehicle", "At least 10 to 15 seconds ahead", "At the car behind you"],
-				correctAnswer: 1
-			},
-			{
-				question: "What is the recommended minimum following distance under normal driving conditions?",
-				options: ["1 second", "3 seconds", "5 seconds"],
-				correctAnswer: 1
-			},
-			{
-				question: "Why should you increase your following distance in poor weather conditions?",
-				options: ["To have more time to react in case of emergencies", "To allow other vehicles to pass", "To conserve fuel"],
-				correctAnswer: 0
-			},
-			{
-				question: "Which type of road surface provides the least traction in wet conditions?",
-				options: ["Concrete", "Asphalt", "Gravel"],
-				correctAnswer: 1
-			},
-			{
-				question: "What is the best way to handle a curve in the road?",
-				options: ["Accelerate through the curve", "Slow down before entering the curve", "Speed up just before entering the curve"],
-				correctAnswer: 1
-			},
-			{
-				question: "What should you do if your vehicle starts to skid?",
-				options: ["Brake immediately", "Steer in the direction of the skid", "Accelerate to regain control"],
-				correctAnswer: 1
-			},
-			{
-				question: "What is the proper action to take if you are being tailgated?",
-				options: ["Speed up to create more space", "Slow down to encourage the tailgater to pass", "Make a quick stop"],
-				correctAnswer: 1
-			},
-			{
-				question: "When merging onto the highway, what is the correct speed?",
-				options: ["10 mph below the speed of traffic", "The same speed as traffic", "5 mph above the speed of traffic"],
-				correctAnswer: 1
-			},
-			{
-				question: "What is the purpose of space management while driving?",
-				options: ["To increase the number of cars that can fit on the road", "To reduce wear and tear on your vehicle", "To ensure you have enough space to react to hazards"],
-				correctAnswer: 2
-			},
-			{
-				question: "Why should you communicate your intentions to other drivers on the road?",
-				options: ["To avoid getting a ticket", "To prevent accidents by helping other drivers understand what you plan to do", "To show courtesy to pedestrians"],
-				correctAnswer: 1
-			},
-			{
-				question: "Which of the following is a way to reduce hazards when driving?",
-				options: ["Drive faster to clear an area of hazard", "Slow down and adjust to changing road conditions", "Use your horn to alert other drivers"],
-				correctAnswer: 1
-			},
-			{
-				question: "What should you do when approaching a work zone?",
-				options: ["Speed up to pass through quickly", "Slow down and proceed with caution", "Change lanes immediately"],
-				correctAnswer: 1
-			},
-			{
-				question: "How can you make yourself more visible to other drivers?",
-				options: ["Turn on your headlights during the day", "Honk frequently in traffic", "Drive closer to other vehicles"],
-				correctAnswer: 0
-			},
-			{
-				question: "When should you use your horn to communicate with other drivers?",
-				options: ["To express frustration in traffic", "To alert another driver to your presence if they don't see you", "To signal a lane change"],
-				correctAnswer: 1
-			}
+		    {
+		        question: "How far should you look ahead when driving in the city?",
+		        options: ["1 block", "2 blocks", "3 blocks"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "How far ahead should you look when driving on the highway?",
+		        options: ["A quarter mile", "Half a mile", "One mile"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What is the proper way to check your blind spots before changing lanes?",
+		        options: ["Check rearview mirrors", "Check side mirrors", "Turn your head and look over your shoulder"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "What should you do if you see a green light that has been on for a long time?",
+		        options: ["Speed up to get through the intersection", "Slow down and be prepared to stop", "Continue at your current speed"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "At 60 mph, how far does your vehicle travel in order to react and stop?",
+		        options: ["123 feet", "359 feet", "268 feet"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is the safe following distance under normal conditions?",
+		        options: ["1 second", "2 seconds", "4 seconds"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What does ABS stand for?",
+		        options: ["Automatic Braking System", "Anti-Lock Braking System", "Advanced Braking System"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When driving in rain or snow, how much should you reduce your speed?",
+		        options: ["By 10 mph", "By 20 mph", "By half"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What is the main benefit of scanning the road ahead?",
+		        options: ["To reduce fuel consumption", "To avoid emergency braking", "To keep traffic moving"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When driving at night, how can you make sure others see your vehicle?",
+		        options: ["Use headlights", "Use high beams", "Drive with your hazard lights on"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What should you do if you hydroplane?",
+		        options: ["Brake hard", "Take your foot off the gas", "Turn the steering wheel sharply"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "How do you determine the appropriate following distance?",
+		        options: ["By counting the number of car lengths", "By checking the speed limit", "By using a fixed object to count seconds"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "When is it safe to use your horn?",
+		        options: ["To alert another driver of an emergency", "To greet a friend", "To express frustration"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What is a visual lead?",
+		        options: ["An area 20 to 30 seconds ahead", "A rearview mirror check", "A blind spot check"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "When merging onto a highway, what should you do?",
+		        options: ["Stop at the end of the acceleration lane", "Enter at the same speed as traffic", "Drive slowly to find a gap"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do when approaching a railroad crossing?",
+		        options: ["Speed up to cross quickly", "Slow down and check both directions", "Stop only if a train is coming"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When turning left at an intersection, you should:",
+		        options: ["Turn immediately", "Wait for a safe gap in traffic", "Follow the vehicle ahead of you"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do if a large vehicle is following closely behind you?",
+		        options: ["Speed up", "Slow down to let them pass", "Change lanes"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is the recommended speed reduction when driving on packed snow?",
+		        options: ["Reduce speed by a third", "Reduce speed by half", "Reduce speed by a quarter"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "How do you avoid being blinded by oncoming headlights at night?",
+		        options: ["Look directly at the lights", "Look to the right side of the road", "Close your eyes for a second"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When passing a vehicle, how much time do you need for a safe pass?",
+		        options: ["5 to 10 seconds", "10 to 15 seconds", "20 to 30 seconds"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "When stopped at a red light, you should:",
+		        options: ["Look ahead only", "Check left, right, and ahead", "Only check your mirrors"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "In which weather condition should you expect roads to be most slippery?",
+		        options: ["During the first few minutes of rain", "After rain has stopped", "When it's been raining for hours"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What is the purpose of a deceleration lane on a highway?",
+		        options: ["To reduce speed before exiting", "To speed up before merging", "To park your vehicle"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What is the consequence of driving too fast on a curve?",
+		        options: ["Your vehicle may skid", "You will reduce fuel efficiency", "You will damage your tires"],
+		        correctAnswer: 0
+		    }
 		];
+
 
 
 
@@ -216,9 +268,15 @@
 
         const quizElement = document.getElementById('quiz');
         const submitButton = document.getElementById('submit');
+        const homeButton = document.getElementById('home'); // Home button
         const resultElement = document.getElementById('result');
         const scoreTrackerElement = document.getElementById('score-tracker');
         const progressElement = document.getElementById('progress');
+
+        // Functionality to return home
+        homeButton.onclick = () => {
+            window.location.href = "index.html"; // Redirect to index.html or your homepage
+        };
 
         function loadQuestion() {
             if (currentQuestion < quizData.length) {
