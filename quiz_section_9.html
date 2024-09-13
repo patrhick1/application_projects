@@ -123,115 +123,138 @@
         <div id="score-tracker">Question 1/5 | Score: 0</div>
         <div id="quiz"></div>
         <button id="submit">Submit Answer</button>
+	<button id="home">Back to Home</button>
         <div id="result"></div>
     </div>
 
     <script>
         const quizData = [
-			{
-				question: "What should you do if a pedestrian is crossing in the middle of the street, not at a crosswalk (jaywalking)?",
-				options: ["Honk your horn to warn them", "Stop and yield to the pedestrian", "Continue driving as long as no traffic is approaching"],
-				correctAnswer: 1
-			},
-			{
-				question: "What is the correct action when you see a bicyclist in a bicycle lane approaching an intersection where you plan to turn right?",
-				options: ["Pass the bicyclist and make your turn immediately", "Slow down and allow the bicyclist to pass the intersection first", "Speed up to clear the intersection before the bicyclist"],
-				correctAnswer: 1
-			},
-			{
-				question: "What should you do when driving near a person using a white cane or guide dog?",
-				options: ["Honk to alert the person of your presence", "Stop and give them the right-of-way", "Continue driving as long as you stay in your lane"],
-				correctAnswer: 1
-			},
-			{
-				question: "How should you pass a motorcyclist on the road?",
-				options: ["In the same lane to minimize space", "In a different lane, giving them the full width of the lane", "By speeding up to clear the lane quickly"],
-				correctAnswer: 1
-			},
-			{
-				question: "What does a fluorescent orange and red triangle on the back of a vehicle indicate?",
-				options: ["The vehicle is carrying hazardous materials", "The vehicle is a slow-moving vehicle traveling less than 25 mph", "The vehicle is an emergency vehicle"],
-				correctAnswer: 1
-			},
-			{
-				question: "What should you do when following a large vehicle like a truck or bus?",
-				options: ["Follow closely to avoid being cut off by other vehicles", "Leave extra space and be aware of their larger blind spots", "Pass them as quickly as possible"],
-				correctAnswer: 1
-			},
-			{
-				question: "What is the proper procedure when approaching a school bus with flashing red lights?",
-				options: ["Stop, regardless of the direction you are traveling", "Only stop if you are traveling in the same direction as the bus", "Continue driving if there is no oncoming traffic"],
-				correctAnswer: 0
-			},
-			{
-				question: "How should you interact with horseback riders on the road?",
-				options: ["Honk to alert the horse and rider of your presence", "Slow down, give them plenty of space, and do not honk", "Pass them quickly to avoid startling the horse"],
-				correctAnswer: 1
-			},
-			{
-				question: "What should you do when approaching a rail crossing with flashing lights?",
-				options: ["Speed up to cross before the train arrives", "Stop and wait until the lights stop flashing and it’s safe to proceed", "Proceed if no train is visible"],
-				correctAnswer: 1
-			},
-			{
-				question: "How should you handle a situation where a bicyclist is riding in the middle of the lane?",
-				options: ["Honk to alert the bicyclist to move to the side", "Wait until it is safe to pass, giving the bicyclist the full lane", "Pass closely to avoid disrupting other traffic"],
-				correctAnswer: 1
-			},
-			{
-				question: "What should you do if you are driving and an emergency vehicle with flashing lights approaches from behind?",
-				options: ["Stop immediately in your lane", "Move to the right side of the road and stop", "Continue driving until you can safely pull over"],
-				correctAnswer: 1
-			},
-			{
-				question: "When should you yield the right-of-way to a pedestrian?",
-				options: ["Only when they are in a crosswalk", "Always, regardless of whether they are in a crosswalk", "Only when there are no other vehicles around"],
-				correctAnswer: 1
-			},
-			{
-				question: "How should you interact with a bus that is dropping off passengers?",
-				options: ["Pass the bus carefully as it stops", "Watch for passengers crossing the street and drive slowly", "Stop behind the bus until all passengers have exited"],
-				correctAnswer: 1
-			},
-			{
-				question: "How should you respond if a motorcyclist is weaving through traffic?",
-				options: ["Honk to warn them to stay in their lane", "Maintain a safe distance and be prepared for sudden movements", "Speed up to get ahead of them"],
-				correctAnswer: 1
-			},
-			{
-				question: "What should you do when a truck or large vehicle is making a wide turn?",
-				options: ["Try to pass on the inside", "Wait for the truck to complete the turn", "Honk to alert the truck of your presence"],
-				correctAnswer: 1
-			},
-			{
-				question: "When is it illegal to pass a bicyclist on a two-lane road?",
-				options: ["When approaching a hill or curve", "When there are no oncoming vehicles", "When the bicyclist is traveling slowly"],
-				correctAnswer: 0
-			},
-			{
-				question: "What should you do when approaching a crosswalk where children are present?",
-				options: ["Speed up to pass before they enter the crosswalk", "Slow down and be prepared to stop", "Only stop if a crossing guard is present"],
-				correctAnswer: 1
-			},
-			{
-				question: "When passing a farm vehicle on a rural road, what should you consider?",
-				options: ["The farm vehicle may be making a wide turn", "The farm vehicle is likely to speed up", "There is no need to be cautious, as they must yield"],
-				correctAnswer: 0
-			},
-			{
-				question: "How should you behave when sharing the road with slow-moving vehicles like tractors or animal-drawn carts?",
-				options: ["Pass as quickly as possible", "Be patient, and pass only when it is safe", "Honk to make them move over"],
-				correctAnswer: 1
-			},
-			{
-				question: "What is the purpose of a 'sharrow' marking on the road?",
-				options: ["To indicate a no-passing zone", "To show where bicyclists may ride in the lane", "To indicate a pedestrian crossing"],
-				correctAnswer: 1
-			}
+		    {
+		        question: "When must you yield to pedestrians at an intersection?",
+		        options: ["Only at marked crosswalks", "Always, even if the crosswalk is not marked", "Only when they are jaywalking"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do if you see a pedestrian crossing in the middle of the street without a crosswalk?",
+		        options: ["Stop and let them cross", "Honk your horn", "Speed up to pass before they cross"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "Where should pedestrians walk when there is no sidewalk?",
+		        options: ["On the right side of the road", "In the middle of the road", "On the left side facing traffic"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "What should drivers do when approaching a pedestrian with a white cane or guide dog?",
+		        options: ["Speed up", "Stop and yield the right of way", "Honk the horn to alert them"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When are bicyclists allowed to use the full lane?",
+		        options: ["Always", "When making a left-hand turn", "Only on highways"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do when passing a bicyclist on the road?",
+		        options: ["Slow down and leave as much space as possible", "Speed up to pass quickly", "Honk to warn them"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What must a bicyclist do when they reach an intersection and the traffic signal does not detect their bicycle?",
+		        options: ["Wait for another vehicle", "Proceed after waiting a reasonable amount of time", "Turn around and find another route"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "How much following distance should you allow when driving behind a motorcyclist?",
+		        options: ["1-2 seconds", "3-4 seconds", "5-6 seconds"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "Why should you not assume a motorcycle is turning just because its turn signal is flashing?",
+		        options: ["Motorcycles do not have turn signals", "Motorcycle turn signals may not cancel automatically", "Motorcycles change lanes more often"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "When is it acceptable to drive in a bike lane?",
+		        options: ["When making a turn", "Never", "When there are no bicyclists present"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What should you do if a motorcycle is passing your vehicle?",
+		        options: ["Speed up to stay ahead", "Maintain your lane position and speed", "Move to the left to let them pass"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "How should you respond when an emergency vehicle with flashing lights is approaching?",
+		        options: ["Pull over to the right and stop", "Speed up to get out of the way", "Continue driving at the same speed"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What should you do when driving near large commercial vehicles like trucks and buses?",
+		        options: ["Pass quickly", "Stay in their blind spots", "Avoid driving in their No-Zones"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "What is the No-Zone on a large truck or bus?",
+		        options: ["The area under the truck", "The large blind spots around the truck or bus", "The engine compartment"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do if you see a school bus with flashing red lights and the stop sign extended?",
+		        options: ["Stop and wait until the lights stop flashing", "Pass carefully on the left", "Honk your horn to alert other drivers"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "How far must you stop from a stopped school bus with flashing lights?",
+		        options: ["10 feet", "15 feet", "20 feet"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "What should you do when approaching a stopped transit bus?",
+		        options: ["Pass quickly", "Slow down and be prepared for pedestrians crossing", "Honk your horn to alert pedestrians"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "How can you avoid a collision with a motorcycle at an intersection?",
+		        options: ["Assume they are going slower than they appear", "Look carefully for motorcycles before turning", "Only check for larger vehicles"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do when a farm vehicle is on the road?",
+		        options: ["Pass it quickly", "Follow at a safe distance and pass with caution", "Honk to alert the driver"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do when a slow-moving vehicle displays a fluorescent orange and red triangle?",
+		        options: ["Pass quickly", "Drive cautiously and be prepared to slow down", "Honk to alert the driver"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When sharing the road with horseback riders, what should you avoid doing?",
+		        options: ["Pass slowly", "Honk your horn or rev your engine", "Give them space on the road"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "How should you behave when you encounter an animal-drawn vehicle on the road?",
+		        options: ["Pass quickly", "Follow at a safe distance and pass carefully", "Honk to scare the animals"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is the safest action when you see a vehicle stopped at a pedestrian crossing?",
+		        options: ["Pass the vehicle on the left", "Stop and check for pedestrians crossing in front of it", "Honk to alert the driver"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do when driving in a school zone with flashing lights?",
+		        options: ["Drive the speed limit", "Slow down and be prepared to stop", "Honk to alert children"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do when a motorcycle is approaching from the opposite direction?",
+		        options: ["Stay in your lane and proceed carefully", "Move to the left lane to give them space", "Honk to alert them"],
+		        correctAnswer: 0
+		    }
 		];
-
-
-
 
 
         let currentQuestion = 0;
@@ -240,9 +263,15 @@
 
         const quizElement = document.getElementById('quiz');
         const submitButton = document.getElementById('submit');
+        const homeButton = document.getElementById('home'); // Home button
         const resultElement = document.getElementById('result');
         const scoreTrackerElement = document.getElementById('score-tracker');
         const progressElement = document.getElementById('progress');
+
+        // Functionality to return home
+        homeButton.onclick = () => {
+            window.location.href = "index.html"; // Redirect to index.html or your homepage
+        };
 
         function loadQuestion() {
             if (currentQuestion < quizData.length) {
