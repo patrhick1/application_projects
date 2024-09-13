@@ -123,93 +123,138 @@
         <div id="score-tracker">Question 1/5 | Score: 0</div>
         <div id="quiz"></div>
         <button id="submit">Submit Answer</button>
+	<button id="home">Back to Home</button>
         <div id="result"></div>
     </div>
 
     <script>
         const quizData = [
-			{
-				question: "When must you yield the right-of-way to a pedestrian?",
-				options: ["Only when they are in a marked crosswalk", "Always, even if they are not in a crosswalk", "Only when they are crossing with the light"],
-				correctAnswer: 1
-			},
-			{
-				question: "What is the proper response when you approach a traffic signal showing a red light?",
-				options: ["Stop completely and wait for the light to turn green", "Slow down, but only stop if there's traffic", "Continue through the intersection if no cars are present"],
-				correctAnswer: 0
-			},
-			{
-				question: "At a four-way stop, who has the right-of-way?",
-				options: ["The first driver to stop", "The driver on the left", "The driver on the right"],
-				correctAnswer: 0
-			},
-			{
-				question: "What should you do if you are turning left at an intersection and an oncoming vehicle is going straight?",
-				options: ["Speed up to make the turn before the vehicle arrives", "Yield to the oncoming vehicle", "Turn as long as the light is green"],
-				correctAnswer: 1
-			},
-			{
-				question: "When approaching a school bus with flashing red lights and an extended stop arm, you must:",
-				options: ["Pass carefully if there are no children present", "Stop, regardless of the direction you are traveling", "Only stop if the bus is on the same side of the road as you"],
-				correctAnswer: 1
-			},
-			{
-				question: "How far from a stop sign should you park?",
-				options: ["10 feet", "20 feet", "50 feet"],
-				correctAnswer: 1
-			},
-			{
-				question: "In a roundabout, what is the proper procedure for exiting?",
-				options: ["Signal your exit and move to the outer lane", "Change lanes quickly and exit", "Exit without signaling if no cars are behind you"],
-				correctAnswer: 0
-			},
-			{
-				question: "When is it illegal to pass another vehicle on a two-lane road?",
-				options: ["On a hill or curve where you can't see oncoming traffic", "When there are no oncoming vehicles in sight", "When the vehicle is driving below the speed limit"],
-				correctAnswer: 0
-			},
-			{
-				question: "What should you do when approaching a railroad crossing with a stop sign?",
-				options: ["Stop, then proceed only if no train is coming", "Slow down and proceed without stopping", "Stop only if a train is visible"],
-				correctAnswer: 0
-			},
-			{
-				question: "What does a double yellow line in the center of a road signify?",
-				options: ["You can pass if no cars are coming", "Passing is prohibited in both directions", "You can pass if there is enough room"],
-				correctAnswer: 1
-			},
-			{
-				question: "If two vehicles arrive at an intersection at the same time, who has the right-of-way?",
-				options: ["The vehicle on the left", "The vehicle on the right", "The larger vehicle"],
-				correctAnswer: 1
-			},
-			{
-				question: "What should you do if you miss your highway exit?",
-				options: ["Stop and back up to the exit", "Take the next exit and turn around", "Cross over the median to reach your exit"],
-				correctAnswer: 1
-			},
-			{
-				question: "What does a flashing yellow traffic signal mean?",
-				options: ["Stop immediately", "Proceed with caution", "Speed up before the light changes"],
-				correctAnswer: 1
-			},
-			{
-				question: "When parking uphill with a curb, which way should you turn your wheels?",
-				options: ["Away from the curb", "Toward the curb", "Leave them straight"],
-				correctAnswer: 0
-			},
-			{
-				question: "What is the minimum following distance recommended under normal conditions?",
-				options: ["1 second", "3 seconds", "5 seconds"],
-				correctAnswer: 1
-			}
+		    {
+		        question: "What should you do when approaching a roundabout?",
+		        options: ["Speed up", "Slow down", "Stop completely"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "Who must yield at an uncontrolled intersection?",
+		        options: ["The vehicle on the left", "The vehicle on the right", "The vehicle going straight"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What does a flashing red traffic light mean?",
+		        options: ["Proceed with caution", "Stop completely and proceed when safe", "Slow down"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When can you make a right turn on a red light?",
+		        options: ["When the intersection is clear and there is no sign prohibiting it", "Never", "When the light has been red for a long time"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What does a green arrow indicate?",
+		        options: ["You must stop", "You can turn in the direction of the arrow if the intersection is clear", "You can go straight"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "How far must you stop from a school bus with flashing red lights?",
+		        options: ["10 feet", "15 feet", "At least 20 feet"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "What should you do if you see a yellow dashed line on your side of the road?",
+		        options: ["Passing is permitted", "Passing is prohibited", "You must stop and wait for traffic to clear"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What should you do if you miss your exit on the highway?",
+		        options: ["Back up carefully", "Proceed to the next exit", "Stop immediately"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is the purpose of a stop sign?",
+		        options: ["To warn of potential hazards", "To control traffic at intersections", "To allow passing"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When parking uphill with a curb, in which direction should you turn your wheels?",
+		        options: ["Toward the curb", "Away from the curb", "Straight ahead"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What does a red and white yield sign mean?",
+		        options: ["You must slow down and be ready to stop if necessary", "You have the right of way", "You must stop and then proceed"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What does a yellow light mean?",
+		        options: ["Hurry through the intersection", "Slow down and prepare to stop", "Continue at your current speed"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "How should you respond to a green light at an intersection?",
+		        options: ["Proceed immediately", "Check for crossing traffic before proceeding", "Wait for traffic to clear"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What does a flashing yellow light mean?",
+		        options: ["Stop completely", "Proceed with caution", "Continue at normal speed"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What does a 'No U-Turn' sign indicate?",
+		        options: ["You can turn only if the road is clear", "U-turns are not allowed at any time", "You must turn left"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When driving on a multi-lane road, where should slower traffic stay?",
+		        options: ["In the left lane", "In the right lane", "In the middle lane"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do if a pedestrian is crossing the street illegally?",
+		        options: ["Honk your horn", "Stop and yield to the pedestrian", "Proceed with caution"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do if you see a sign indicating 'Lane Ends'?",
+		        options: ["Merge safely into the next lane", "Stop and wait", "Continue driving until the lane ends"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What is the purpose of a 'Do Not Enter' sign?",
+		        options: ["To warn of a one-way street", "To allow parking", "To restrict entry to a certain area"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "How should you approach a pedestrian crosswalk with no traffic signals?",
+		        options: ["Slow down and yield to pedestrians", "Honk to alert pedestrians", "Speed up to cross before pedestrians"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "When is it safe to drive in a reserved lane?",
+		        options: ["Only when the lane is clear", "Never, unless allowed by signs", "When you are in a hurry"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What does a solid white line between lanes mean?",
+		        options: ["You can change lanes freely", "You must stay in your lane unless a special situation requires a lane change", "You must stop"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When entering a highway, how should you adjust your speed?",
+		        options: ["Match the speed of traffic", "Drive slower than traffic", "Speed up to pass vehicles"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What is a shared center turn lane used for?",
+		        options: ["Passing vehicles", "Turning left in both directions", "Stopping and waiting"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "When should you yield the right of way at a four-way stop?",
+		        options: ["To the driver on your right", "To the driver on your left", "To the vehicle that arrives last"],
+		        correctAnswer: 0
+		    }
 		];
-
-
-
-
-
-
 
         let currentQuestion = 0;
         let score = 0;
@@ -217,9 +262,15 @@
 
         const quizElement = document.getElementById('quiz');
         const submitButton = document.getElementById('submit');
+        const homeButton = document.getElementById('home'); // Home button
         const resultElement = document.getElementById('result');
         const scoreTrackerElement = document.getElementById('score-tracker');
         const progressElement = document.getElementById('progress');
+
+        // Functionality to return home
+        homeButton.onclick = () => {
+            window.location.href = "index.html"; // Redirect to index.html or your homepage
+        };
 
         function loadQuestion() {
             if (currentQuestion < quizData.length) {
