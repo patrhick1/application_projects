@@ -118,121 +118,143 @@
 </head>
 <body>
     <div class="quiz-container">
-        <h1>DMV Quiz</h1>
+        <h1>DMV Quiz - Section 8</h1>
         <div id="progress-bar"><div id="progress"></div></div>
         <div id="score-tracker">Question 1/5 | Score: 0</div>
         <div id="quiz"></div>
         <button id="submit">Submit Answer</button>
+	<button id="home">Back to Home</button>
         <div id="result"></div>
     </div>
 
     <script>
         const quizData = [
-			{
-				question: "What are the three options you have to avoid a collision?",
-				options: ["Brake, steer, or accelerate", "Honk, slow down, or swerve", "Reverse, accelerate, or signal"],
-				correctAnswer: 0
-			},
-			{
-				question: "If your vehicle has ABS (Anti-lock Braking System), how should you brake in an emergency?",
-				options: ["Press the brake pedal and release it in quick intervals", "Press down hard and keep pressing the brake pedal", "Pump the brake pedal lightly"],
-				correctAnswer: 1
-			},
-			{
-				question: "How can you stop quickly without ABS?",
-				options: ["Apply the brakes as hard as possible and steer", "Apply the brakes firmly, release if they lock, then reapply", "Pump the brakes rapidly"],
-				correctAnswer: 1
-			},
-			{
-				question: "When is it safer to accelerate to avoid a collision?",
-				options: ["When a vehicle is about to hit you from the side or behind, and there is room in front", "When the brakes fail and you are approaching an intersection", "When driving in foggy conditions"],
-				correctAnswer: 0
-			},
-			{
-				question: "If your vehicle starts to skid, what should you do?",
-				options: ["Steer in the direction you want the vehicle to go", "Slam on the brakes to stop immediately", "Accelerate out of the skid"],
-				correctAnswer: 0
-			},
-			{
-				question: "What is the best action to take if your brakes stop working?",
-				options: ["Pump the brake pedal several times", "Shift into neutral immediately", "Turn off the engine"],
-				correctAnswer: 0
-			},
-			{
-				question: "In the event of a tire blowout, what should you NOT do?",
-				options: ["Grip the steering wheel firmly", "Brake hard immediately", "Slow down gradually by taking your foot off the accelerator"],
-				correctAnswer: 1
-			},
-			{
-				question: "What should you do if your accelerator sticks?",
-				options: ["Shift to neutral and apply the brakes", "Turn off the engine immediately", "Pull the emergency brake"],
-				correctAnswer: 0
-			},
-			{
-				question: "What is the first step to take if your vehicle stalls on the highway?",
-				options: ["Turn on your hazard lights and attempt to restart the vehicle", "Immediately exit the vehicle", "Push the vehicle off the road"],
-				correctAnswer: 0
-			},
-			{
-				question: "When should you NOT swerve to avoid a collision?",
-				options: ["When hitting a small animal", "When it puts you into oncoming traffic", "When you can safely brake instead"],
-				correctAnswer: 1
-			},
-			{
-				question: "What should you do to avoid a head-on collision if a vehicle is coming toward you in your lane?",
-				options: ["Steer to the right", "Speed up to pass quickly", "Honk your horn and stay in your lane"],
-				correctAnswer: 0
-			},
-			{
-				question: "In a power failure situation, how should you control the vehicle?",
-				options: ["Turn off the ignition and apply the brakes", "Shift to neutral, steer smoothly, and brake gently", "Pump the brakes to regain control"],
-				correctAnswer: 1
-			},
-			{
-				question: "What is the most important thing to do when your vehicle is disabled on the road?",
-				options: ["Attempt to repair it immediately", "Signal your vehicle’s presence with emergency flares or flashers", "Wait inside the vehicle without signaling"],
-				correctAnswer: 1
-			},
-			{
-				question: "What should you do if your headlights fail at night?",
-				options: ["Pull off the road immediately and use emergency flashers", "Turn on your high beams", "Speed up to reach a well-lit area"],
-				correctAnswer: 0
-			},
-			{
-				question: "In which scenario should you attempt to drive through standing water?",
-				options: ["If you are familiar with the road", "Only if the water appears shallow", "Never, as it can cause the vehicle to stall"],
-				correctAnswer: 2
-			},
-			{
-				question: "What should you do if your vehicle begins to hydroplane?",
-				options: ["Slam on the brakes to regain traction", "Ease off the accelerator and steer straight", "Steer in the opposite direction of the skid"],
-				correctAnswer: 1
-			},
-			{
-				question: "What is the proper response when faced with glare from oncoming headlights at night?",
-				options: ["Look toward the centerline of the road", "Keep your headlights on high beam", "Look toward the right edge of the road"],
-				correctAnswer: 2
-			},
-			{
-				question: "What should you do to avoid a rear-end collision if the vehicle behind you is tailgating?",
-				options: ["Speed up to create more space", "Slow down to encourage the vehicle to pass", "Brake hard to scare the tailgater"],
-				correctAnswer: 1
-			},
-			{
-				question: "How should you avoid collisions with large animals on the road?",
-				options: ["Swerve into oncoming traffic to avoid the animal", "Slow down and be prepared to stop", "Speed up to clear the area quickly"],
-				correctAnswer: 1
-			},
-			{
-				question: "What should you do if your windshield wipers fail in heavy rain?",
-				options: ["Slow down, pull off the road, and turn on your emergency flashers", "Speed up to increase visibility", "Continue driving with your headlights on high beam"],
-				correctAnswer: 0
-			}
+		    {
+		        question: "What are your three options to avoid a collision?",
+		        options: ["Brake, steer, accelerate", "Speed up, swerve, honk", "Brake, reverse, honk"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "If your vehicle has ABS (Anti-lock Braking System), what should you do to stop quickly?",
+		        options: ["Pump the brakes", "Press the brake pedal as hard as you can and hold it down", "Let go of the brakes"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do if your vehicle does not have ABS and the brakes lock up?",
+		        options: ["Let go of the brake pedal and then reapply", "Continue holding the brake", "Press the gas pedal"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "When is steering often more effective than braking to avoid a collision?",
+		        options: ["At low speeds", "When the road is wet", "In most cases, because you can steer faster than you can stop"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "If your vehicle begins to skid, where should you look?",
+		        options: ["At the hazard you are trying to avoid", "In the direction you want the vehicle to go", "At the ground"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do if your vehicle starts skidding on a wet or icy road?",
+		        options: ["Brake hard", "Ease off the accelerator and steer in the direction you want to go", "Accelerate quickly"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "How can you reduce injuries in a collision if your vehicle is hit from the rear?",
+		        options: ["Turn off the engine", "Press yourself against the back of the seat and press your head against the headrest", "Lean forward"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is the most effective way to protect yourself in a rollover accident?",
+		        options: ["Wearing a safety belt", "Driving fast to get out of the way", "Using the horn"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What should you do if you experience a tire blowout?",
+		        options: ["Brake immediately", "Grip the steering wheel firmly and slow down gradually", "Turn sharply to the right"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "How should you respond if your brakes fail?",
+		        options: ["Shift to neutral and coast", "Pump the brake pedal rapidly", "Press the gas pedal"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do if your engine shuts off while driving?",
+		        options: ["Shift to neutral and look for a safe place to pull off", "Turn off all lights", "Brake hard"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "How should you respond if your accelerator sticks?",
+		        options: ["Shift to neutral and steer off the roadway", "Brake hard", "Turn off the engine immediately"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "What is the best way to return to the road after your wheels leave the pavement?",
+		        options: ["Brake hard and turn sharply", "Slow down and ease back onto the pavement when it is safe", "Accelerate quickly to regain control"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is the recommended way to steer out of a skid?",
+		        options: ["Turn the steering wheel away from the skid", "Turn the steering wheel in the direction you want to go", "Turn the wheel in the opposite direction of the skid"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "How should you steer when using ABS during an emergency?",
+		        options: ["Brake and steer in the direction you want to go", "Only brake", "Only steer, not brake"],
+		        correctAnswer: 0
+		    },
+		    {
+		        question: "How can you prevent your vehicle from skidding in icy or wet conditions?",
+		        options: ["Drive quickly", "Avoid sudden braking and turning", "Use your parking brake"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "If your vehicle starts to lose traction, what is the first step?",
+		        options: ["Press the brake", "Lift off the pedals", "Accelerate"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you avoid doing if your vehicle skids?",
+		        options: ["Continue steering and counter-steering", "Keep looking in the direction you want to go", "Focus on the obstacle"],
+		        correctAnswer: 2
+		    },
+		    {
+		        question: "If you cannot avoid a collision, what should you try to do?",
+		        options: ["Brace yourself", "Try to make the collision a glancing blow rather than a head-on impact", "Jump out of the vehicle"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "How do you safely slow down if your vehicle leaves the pavement?",
+		        options: ["Brake hard", "Gently apply the brakes", "Shift to a lower gear"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you do if your vehicle is about to be hit from the side?",
+		        options: ["Brace yourself", "Prepare to steer or brake to avoid hitting something else", "Let go of the steering wheel"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What should you avoid doing if your vehicle has a power failure while driving?",
+		        options: ["Shift to neutral", "Brake hard", "Steer smoothly and gradually slow down"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "What is a key factor in preventing a rollover?",
+		        options: ["Wearing a safety belt", "Avoiding sharp steering movements", "Driving at high speeds"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "If you experience uneven surface drop-offs, how should you return to the pavement?",
+		        options: ["Quickly steer back onto the pavement", "Straddle the pavement edge and return gradually", "Accelerate and return immediately"],
+		        correctAnswer: 1
+		    },
+		    {
+		        question: "How should you handle a tire blowout while driving?",
+		        options: ["Brake hard and stop immediately", "Slow down gradually and pull off the road", "Accelerate to regain control"],
+		        correctAnswer: 1
+		    }
 		];
-
-
-
-
 
 
         let currentQuestion = 0;
@@ -241,9 +263,15 @@
 
         const quizElement = document.getElementById('quiz');
         const submitButton = document.getElementById('submit');
+        const homeButton = document.getElementById('home'); // Home button
         const resultElement = document.getElementById('result');
         const scoreTrackerElement = document.getElementById('score-tracker');
         const progressElement = document.getElementById('progress');
+
+        // Functionality to return home
+        homeButton.onclick = () => {
+            window.location.href = "index.html"; // Redirect to index.html or your homepage
+        };
 
         function loadQuestion() {
             if (currentQuestion < quizData.length) {
